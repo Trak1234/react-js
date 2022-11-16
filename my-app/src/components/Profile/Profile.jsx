@@ -1,19 +1,15 @@
 import React from 'react';
-import MyPosts from './MyPost/MyPost';
-import p from './Profile.module.css';
-import ProfileInfo from './ProfileInfo.jsx/ProfileInfo';
+import s from './Profile.module.css';
+import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
+const Profile = (props) => {
 
-const  Profile = () => {
     return (
-        
-    <div className={p.content}>
-        <ProfileInfo/>
-        <MyPosts/>
-
-</div>
-        
-        
+        <div>
+            <ProfileInfo/>
+            <MyPosts posts={props.state.posts}  />
+        </div>
     )
 }
 
